@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-simple CV Generator
+    </title>
+    <style>
+        
+
+         
+        
+    
+
+
+        * {
+            margin: 2px;
+            padding: 2px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+        }
+         header {
+            text-align: center;
+            margin-bottom: 20px;
+         }
+          header h1{
+            font-size: 2em;
+            color:#007bff
+          }
+          header h2{
+            font-size: 1.2em;
+            color: #555;
+          }
+
+          nav a {
+            margin: 10px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 1px;
+          }
+          nav a:hover{
+            text-decoration: underline;
+          }
+           main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0  4px 12px rgba(0,0,0,0.1);
+           }
+             
+           form label {
+            display: block;
+            font-weight: bold;
+            color: #555;
+            margin-top: 15px;
+           }
+            form input[type="text"],
+            form input[type="email"],
+            form input[type="tel"],
+            form input[type="te1"],
+
+            form textarea{
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 1em;
+                background-color: #f9f9f9;
+
+            }
+            form textarea{
+                height: 80px;
+            }
+
+            form button.btn {
+                display: block;
+                width: 100%;
+                padding: 12px;
+                margin-top: 20px;
+                font-size: 1em;
+                color: white;
+                background-color: #007bff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            form button.btn:hover{
+                background-color: #0056b3;
+            }
+
+            #templates{
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .templates {
+                text-align: center;
+            }
+             .templates img {
+                width: 100%;
+                max-width: 200px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+             }
+
+             .templates button {
+                margin-top: 10px;
+                padding: 10px;
+                color: #007bff;
+                border: 1px solid #007bff;
+                border-radius: 4px;
+                background: none;
+                cursor: pointer;
+             }
+              .templates button:hover {
+                background-color: #007bff;
+                color: white;
+
+              }
+
+              #downloadBtn {
+                display: block;
+                width: 100%;
+                padding: 12px;
+                font-size: 1em;
+                color: white;
+                background-color: #28a745;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-align: center;
+              }
+
+              #downloadBtn:hover {
+                background-color: #218838;
+              }
+
+              #faq h2 {
+                font-size: 1.2em;
+                color: #007bff;
+                margin-top: 20px;
+              }
+
+              #faq p {
+                margin-top: 10px;
+                color:#666;
+              }
+
+              .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.progress-bar {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+header p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+.next-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    
+    <header>
+        <h1>Home Page</h1>
+        <h2>Welcome to the Simple CV Generator</h2>
+        <nav>
+            <a href="cv-builder.html">start Building</a>
+            <a href="template-selection.html">Templates</a>
+            <a href="help.html">Help</a>
+            <a href="about.html">About</a>
+        </nav><br><br>
+        <div class="progress-bar">
+            <span id="progress-text">Step 1 of 5</span>
+           
+            </div>
+        </div>
+    </header>
+    <main>
+        <p>Generate a professional Cv in minutes.choose a template,enter your details and download it instantly.</p>
+        <a href="cv-builder.html"
+        class="btn">Get Started</a>
+    </main><br><br>
+
+    <div class="progress-bar">
+        <span id="progress-text">Step 2 of 5</span>
+        
+        </div>
+    </div><br><br>
+      <header>
+        <h1>CV builder page</h1>
+        <h2>Build Your Cv</h2>
+      </header>
+      <main>
+        <form id="cvForm">
+            <label for="First Name"> FIRST NAME</label><br>
+            <input type="text" id="First Name"
+            placeholder="First Name"
+            name="First Name" required><br><br>
+
+            <label for="Sur Name">SURNAME</label><br>
+            <input type="text" id="SurName"
+            placeholder="surName"
+            name="SueName" required><br><br>
+
+            <label for="CITY">CITY</label><br>
+            <input type="text" id="City"
+            placeholder="City"
+            name="City" required><br><br>
+
+            <label for="COUNTRY"> COUNTRY</label><br>                  
+                                                                        
+            <input type="text" id="Country"
+            placeholder="Country"
+            name="Country" required><br><br>
+
+            <label for="PIN CODE"> PIN CODE</label><br>
+            <input type="text" id="Pin Code"
+            placeholder="111000"
+            name="Pin Code" required><br><br>
+
+            
+            <label for="Phone"> PHONE</label><br>
+            <input type="te1" id="Phone"
+            
+            name="Phone" required placeholder="+91 0987654321"><br><br>
+
+
+                      
+
+             <label for="email">Email</label><br>
+            <input type="email" id="email"
+            placeholder="name@gmail.com"
+            name="email" required><br><br>
+
+            <button type="Next"
+            class="btn">Next</button><br><br>
+
+            <div class="progress-bar">
+                <span id="progress-text">Step 3 of 5</span>
+                
+                </div>
+            </div><br>
+
+            <h1>Experience</h1>
+            <p>Start with your most recent job first. You can add volunteer work, internships, or extracurricular activities too.</p>
+        </header>
+
+        <form id="experienceForm">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" required>
+
+            <label for="employer">Employer</label>
+            <input type="text" id="employer" name="employer" placeholder="Position" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="City" required>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="India" required>
+
+            
+            
+
+            
+
+            <button type="submit" class="next-btn">Next</button>
+        </form>
+    </div>
+
+
+
+            
+            
+
+        </form>
+    </main><br><br>
+
+    <div class="progress-bar">
+        <span id="progress-text">Step 4 of 5</span>
+        
+    </div>
+
+    <header>
+        <h1>Template Selection Page</h1>
+        <h2>Select a Template</h2>
+    </header>
+    <main>
+        <section id="templates">
+            <div class="templates">
+                <img src="template1.jpg">
+                <br><br>
+                <button>Select Template1</button>
+            </div><br>
+            <div class="templates">
+                <img src="template2.jpg">
+                <br><br>
+                <button>Select Template2</button>
+
+               
+
+            </div>
+        </section>
+    </main><br><br>
+
+    <div class="progress-bar">
+        <span id="progress-text">Step 5 of 5</span>
+        
+    </div>
+
+    <header>
+        <h1>Preview and Download Page</h1>
+        <h2>preview your CV</h2>
+
+    </header>
+    <main>
+
+        
+        <section id="Preview">
+            <!--CV preview content will go here-->
+        </section>
+        <button id="downloadBtn"
+        class="btn">Download Cv</button>
+    </main><br><br>
+
+    <header>
+        <h1>Help & FAQ Page</h1>
+
+    </header>
+    <main>
+        <section id="faq">
+            <h2>How to use this tool?</h2>
+            <p>Follow the steps on each page to build and download your Cv.</p>
+            <h2>Can I customize the templates?</h2>
+            <p>Currently,you can choose from predefined templates.</p>
+        </section>
+    </main><br><br>
+
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <main>
+        This Simple Cv Generator was created to help users quickly create professional Cvs.Developed with HTMl,CSS,and JavaScript,this tool aims to simplify Cv creation for everyone.
+    </main>
+    
+    
+</body>
+</html>
