@@ -235,6 +235,39 @@ form select {
 
 </head>
 <body>
+    <script>  
+        
+        
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+        // Create a link element
+        const link = document.createElement("a");
+        
+        // Set the URL of the file you want to download
+        link.href = "cv.pdf"; // Replace "cv.pdf" with the path to your CV file
+        
+        // Set the download attribute with a default filename
+        link.download = "My_CV.pdf";
+        
+        // Check if it's a mobile device (basic check)
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // Open the file in a new tab on mobile devices
+            link.target = "_blank";
+        }
+
+        // Append the link to the body
+        document.body.appendChild(link);
+        
+        // Programmatically click the link to trigger the download
+        link.click();
+        
+        // Remove the link from the document
+        document.body.removeChild(link);
+    });
+
+
+    </script>
     
     
     <header>
@@ -366,12 +399,23 @@ form select {
             <div class="templates">
                 <img src="template1.jpg">
                 <br><br>
+                <a href="template1.pdf"
+                download="template1.pdf"> 
+
                 <button>Select Template1</button>
+            
+            </a>
+                
+                
+                
             </div><br>
             <div class="templates">
                 <img src="template2.jpg">
                 <br><br>
+                <a href="template2.pdf"
+                download="template2.pdf">
                 <button>Select Template2</button>
+                </a>
 
                
 
